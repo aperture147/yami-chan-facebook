@@ -41,7 +41,7 @@ export function add(msg: Message): void {
         {"name": content[1]},
         {
             $set: {
-                "content": msg.message.replace("t$ac", "").replace(content[1], "").trim(),
+                "content": msg.message.replace("!at", "").replace(content[1], "").trim(),
                 "author": msg.authorId
             }
         },
