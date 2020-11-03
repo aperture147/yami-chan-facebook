@@ -30,7 +30,7 @@ export function handle(msg: Message): void {
             break
 
         case "!code":
-            client.sendMessage(msg.threadId, "https://github.com/aperture147/yami-chan")
+            client.sendMessage(msg.threadId, "https://github.com/aperture147/yami-chan-facebook")
             break
     }
 }
