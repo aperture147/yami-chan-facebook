@@ -7,11 +7,11 @@ export function ping(msg: Message): void {
     const fbLatency: number = Math.abs(Date.now() - msg.timestamp)
     client.db("yami").admin().ping().then(() => {
         fbClient.sendMessage(msg.threadId,
-            `Messenger: \`${fbLatency}\`\n` +
+            `Messenger: \`${fbLatency}\`ms\n` +
             `Database: \`${Math.abs(Date.now() - now)}ms\``)
     }).catch(err => {
         fbClient.sendMessage(msg.threadId,
-            `Messenger: \`${fbLatency}\`\n` +
+            `Messenger: \`${fbLatency}\`ms\n` +
             `Database: \`${err}ms\``)
     })
 
